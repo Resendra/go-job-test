@@ -16,9 +16,12 @@ export class UtilsService {
                 }
 
                 const absoluteItem = Math.abs(item);
+                const absoluteAcc = Math.abs(acc);
 
-                if (absoluteItem < acc) {
+                if (absoluteItem < absoluteAcc) {
                     acc = item;
+                } else if (absoluteItem === absoluteAcc) {
+                    acc = absoluteItem;
                 }
 
                 return acc;
@@ -43,9 +46,12 @@ export class UtilsService {
                 }
 
                 const absoluteItem = Math.abs(item);
+                const absoluteAcc = Math.abs(acc);
 
-                if (absoluteItem < acc) {
+                if (absoluteItem < absoluteAcc) {
                     acc = item;
+                } else if (absoluteItem === absoluteAcc) {
+                    acc = absoluteItem;
                 }
 
                 return acc;
