@@ -36,6 +36,10 @@ describe('UtilsService', () => {
     it('should return closest number to 0 from given array (positive number is returned if the same interval is found with a negative number)', () => {
       expect(service.getClosestToZero([8, 2, 3, -2])).toEqual(2);
     });
+
+    it('should return closest number to 0 from given array (positive number is returned if the same interval is found with a negative number - position is inverted)', () => {
+      expect(service.getClosestToZeroLo([8, -2, 3, 2])).toEqual(2);
+    });
   });
 
   describe('getClosestToZeroLo', () => {
